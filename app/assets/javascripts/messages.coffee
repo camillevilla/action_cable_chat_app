@@ -5,5 +5,10 @@
 message_appender = (content) ->
   $('#messages-table').append content
 
+  submit_message = () ->
+  $('#message_content').on 'keydown', (event) ->
+    if event.keyCode is 13
+      console.log(event)
+
 $(document).on 'turbolinks:load', ->
   message_appender('hello, world!')
