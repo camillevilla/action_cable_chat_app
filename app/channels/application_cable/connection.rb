@@ -14,6 +14,7 @@ module ApplicationCable
         current_user
       else
         reject_unauthorized_connectioned
-
+      end
+    end
   end
 end
